@@ -1,9 +1,10 @@
-from typing import io
+import io
+from rest_framework.renderers import JSONRenderer
+from rest_framework.parsers import JSONParser
 
 from car.models import Car
 from car.serializers import CarSerializer
-from rest_framework.renderers import JSONRenderer
-from rest_framework.parsers import JSONParser
+
 
 
 def serialize_car_object(car: Car) -> bytes:
